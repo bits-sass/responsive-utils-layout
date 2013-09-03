@@ -1,0 +1,55 @@
+/* ==========================================================================
+   Responsive layout utilities
+   ========================================================================== */
+
+/**
+ * Layout utilities with responsive capability
+ *
+ * See original utilities for more info.
+ */
+
+/* Variables
+   ========================================================================== */
+
+/**
+ * Bits.sass utilities namespace
+ */
+
+$bits-utils-ns: 'bits-' !default;
+
+/**
+ * Margin used by `u-objLeft` and `u-objRight`.
+ */
+
+$bits-responsive-layout-obj-margin: 10px !default;
+
+/* Main mixin
+   ========================================================================== */
+
+/**
+ * Mixin encapsulating a version of display utils at a certain breakpoint
+ */
+
+/**
+ * 1. Eg. 'bits-v4-'.
+ */
+
+@mixin bits-layout-responsive($breakpoint) {
+  $prefix: unquote("#{$bits-utils-ns}#{$breakpoint}-"); /* 1 */
+
+  .#{$prefix}u-alignTop {
+    vertical-align: top !important;
+  }
+
+  .#{$prefix}u-alignMiddle {
+    vertical-align: middle !important;
+  }
+
+  .#{$prefix}u-alignBaseline {
+    vertical-align: baseline !important;
+  }
+
+  .#{$prefix}u-alignBottom {
+    vertical-align: bottom !important;
+  }
+}
